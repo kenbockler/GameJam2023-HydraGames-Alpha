@@ -1,0 +1,14 @@
+Maze elemetide mõtteid:
+
+Üllatuslikud Tuulepuhangud: Mängijat võiks aeg-ajalt ootamatult erinevatesse suundadesse lükata.
+
+Rääkivad Ventilaatorid: Need võiksid mängijale "nõu" anda, kuidas labüründist läbi saada, kuigi nõuanded on enamasti kasutud või eksitavad.
+
+Peidetud Ruumid: Ventilatsioonisüsteemis võivad olla peidetud ruumid, kus on boonus-esemeid või komiskeid märkmeid eelmistelt "avastajatelt".
+
+Eksitavad Seinad: Mõned seinad võivad olla illusioonid ja mängija võib neist läbi kõndida.
+
+Tantsivad Tolmuosakesed: Ventilatsiooni sees võib olla tolm, mis muusika taktis tantsib.
+
+
+Naljakas AI tegelane: Mängu Sisene Naljakas Tegelane: Ventilatsiooni sees võib olla naljakas tegelane, kes annab "kasulikke" soovitusi või teeb koomilisi märkusi.
