@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 23144888}
   - component: {fileID: 23144887}
   - component: {fileID: 23144889}
+  - component: {fileID: 23144890}
   m_Layer: 0
   m_Name: vent
   m_TagString: Untagged
@@ -381,6 +382,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.61, y: 2.6310918}
   m_EdgeRadius: 0
+--- !u!114 &23144890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23144886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae70a51c48471944aa50436c4486d220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: VentMaze
 --- !u!1 &42626308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,11 +2963,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6206130480311279828, guid: 0f5657ec885ec384b8be1ec20ddde599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8453
+      value: -6.56
       objectReference: {fileID: 0}
     - target: {fileID: 6206130480311279828, guid: 0f5657ec885ec384b8be1ec20ddde599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.899
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 6206130480311279828, guid: 0f5657ec885ec384b8be1ec20ddde599, type: 3}
       propertyPath: m_LocalPosition.z
