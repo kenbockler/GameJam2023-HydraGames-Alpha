@@ -96,7 +96,8 @@ public class PlayerMovementsTopDown : MonoBehaviour
     {
         isDragging = true;
         objectToDrag = obj;
-        offset = objectToDrag.transform.position - transform.position;
+        Vector3 a = new Vector3(0.001f, 0.001f, 0.001f);
+        offset = objectToDrag.transform.position - transform.position + a;
     }
 
     // Метод для окончания таскания объекта
@@ -111,35 +112,41 @@ public class PlayerMovementsTopDown : MonoBehaviour
     {
         Vector2 localScale = transform.localScale;
         RaycastHit2D hit;
+        RaycastHit2D hit2;
 
         if (isFacingRight)
         {
             Debug.LogWarning("Right");
             hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 2, LayerMask.GetMask("Objects"));
         }
-        else if (!isFacingRight)
+        else
         {
             Debug.LogWarning("Left");
             hit = Physics2D.Raycast(transform.position, Vector2.left * localScale.x, 2, LayerMask.GetMask("Objects"));
 
         }
-        else if (isFacingTop)
+
+        if (isFacingTop)
         {
             Debug.LogWarning("Up");
-            hit = Physics2D.Raycast(transform.position, Vector2.up * localScale.y, 5, LayerMask.GetMask("Objects"));
+            hit2 = Physics2D.Raycast(transform.position, Vector2.up * localScale.y, 5, LayerMask.GetMask("Objects"));
         }
-        else if (!isFacingTop)
+        else
         {
             Debug.LogWarning("Down");
-            hit = Physics2D.Raycast(transform.position, Vector2.down * localScale.y, 5, LayerMask.GetMask("Objects"));
+            hit2 = Physics2D.Raycast(transform.position, Vector2.down * localScale.y, 5, LayerMask.GetMask("Objects"));
         }
-        else {
-            hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 2, LayerMask.GetMask("Objects"));
-        }
+
+
+        
 
         if (hit.collider != null && hit.collider.CompareTag("drag"))
         {
             StartDragging(hit.collider.gameObject);
+        }
+        else if (hit2.collider != null && hit2.collider.CompareTag("drag"))
+        {
+            StartDragging(hit2.collider.gameObject);
         }
     }
 }

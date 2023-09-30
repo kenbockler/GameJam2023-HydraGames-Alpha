@@ -1320,7 +1320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1132047920498413559, guid: d75c6e8ce121db04f9ba1d7ea39cc21a, type: 3}
       propertyPath: m_Mass
-      value: 0.0001
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1132047920498413559, guid: d75c6e8ce121db04f9ba1d7ea39cc21a, type: 3}
       propertyPath: m_BodyType
@@ -1329,6 +1329,10 @@ PrefabInstance:
     - target: {fileID: 1132047920498413559, guid: d75c6e8ce121db04f9ba1d7ea39cc21a, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132047920498413559, guid: d75c6e8ce121db04f9ba1d7ea39cc21a, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4413834525755475562, guid: d75c6e8ce121db04f9ba1d7ea39cc21a, type: 3}
       propertyPath: m_Name
@@ -1440,8 +1444,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9214022007937602684, guid: 08479af5197565742aeed845e89b7458, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214022007937602684, guid: 08479af5197565742aeed845e89b7458, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214022007937602684, guid: 08479af5197565742aeed845e89b7458, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9214022007937602684, guid: 08479af5197565742aeed845e89b7458, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
