@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5811332b-025f-43f6-badf-1aeec3ee08d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Art/Background/Pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Art/Background/Pink.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/Ken.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Ken.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackgroundScroller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackgroundScroller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/Vent Maze.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/Vent Maze.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player/PlayerMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player/PlayerMovements.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +19,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Player/PlayerMovements.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Player/ventTeleport.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
@@ -56,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696068545629</updated>
-      <workItem from="1696068547870" duration="1694000" />
+      <workItem from="1696068547870" duration="2824000" />
     </task>
     <servers />
   </component>
