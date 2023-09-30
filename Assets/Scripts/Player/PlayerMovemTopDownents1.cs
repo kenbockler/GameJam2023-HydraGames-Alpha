@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovementsTopDown : MonoBehaviour
 {
@@ -58,21 +59,34 @@ public class PlayerMovementsTopDown : MonoBehaviour
     {
         if (!isDragging)
         {
-            if (isFacingRight && rigidBody.velocity.x < 0f || !isFacingRight && rigidBody.velocity.x > 0f)
+            if (rigidBody.velocity.x < 0f)
             {
                 isFacingTop = false;
-                isFacingRight = !isFacingRight;
-                Vector2 localScale = transform.localScale;
-                localScale.x *= -1f;
-                transform.localScale = localScale;
+                isFacingRight = false;
+                Quaternion localRotation = transform.localRotation;
+                transform.rotation = Quaternion.Euler(localRotation.x, localRotation.y, 180);
             }
-            if (isFacingTop && rigidBody.velocity.y < 0f || !isFacingTop && rigidBody.velocity.y > 0f)
+            else if(rigidBody.velocity.x > 0f)
+            {
+                isFacingTop = false;
+                isFacingRight = true;
+                Quaternion localRotation = transform.localRotation;
+                transform.rotation = Quaternion.Euler(localRotation.x, localRotation.y, 0);
+            }
+
+            if (rigidBody.velocity.y < 0f)
             {
                 isFacingRight = false;
-                isFacingTop = !isFacingTop;
-                Vector2 localScale = transform.localScale;
-                localScale.y *= -1f;
-                transform.localScale = localScale;
+                isFacingTop = false;
+                Quaternion localRotation = transform.localRotation;
+                transform.rotation = Quaternion.Euler(localRotation.x, localRotation.y, 270);
+            }
+            if (rigidBody.velocity.y > 0f)
+            {
+                isFacingRight = false;
+                isFacingTop = true;
+                Quaternion localRotation = transform.localRotation;
+                transform.rotation = Quaternion.Euler(localRotation.x, localRotation.y, 90);
             }
         }
     }
@@ -96,8 +110,33 @@ public class PlayerMovementsTopDown : MonoBehaviour
     private void CheckForDraggableObject()
     {
         Vector2 localScale = transform.localScale;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 10 , LayerMask.GetMask("Objects"));
-        Debug.Log(hit.collider);
+        RaycastHit2D hit;
+
+        if (isFacingRight)
+        {
+            Debug.LogWarning("Right");
+            hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 2, LayerMask.GetMask("Objects"));
+        }
+        else if (!isFacingRight)
+        {
+            Debug.LogWarning("Left");
+            hit = Physics2D.Raycast(transform.position, Vector2.left * localScale.x, 2, LayerMask.GetMask("Objects"));
+
+        }
+        else if (isFacingTop)
+        {
+            Debug.LogWarning("Up");
+            hit = Physics2D.Raycast(transform.position, Vector2.up * localScale.y, 5, LayerMask.GetMask("Objects"));
+        }
+        else if (!isFacingTop)
+        {
+            Debug.LogWarning("Down");
+            hit = Physics2D.Raycast(transform.position, Vector2.down * localScale.y, 5, LayerMask.GetMask("Objects"));
+        }
+        else {
+            hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 2, LayerMask.GetMask("Objects"));
+        }
+
         if (hit.collider != null && hit.collider.CompareTag("drag"))
         {
             StartDragging(hit.collider.gameObject);
