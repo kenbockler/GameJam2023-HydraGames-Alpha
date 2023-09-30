@@ -94,7 +94,7 @@ public class PlayerMovements : MonoBehaviour
     private void CheckForDraggableObject()
     {
         Vector2 localScale = transform.localScale;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 1 , LayerMask.GetMask("Objects"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * localScale.x, 10 , LayerMask.GetMask("Objects"));
         Debug.Log(hit.collider);
         if (hit.collider != null && hit.collider.CompareTag("drag"))
         {
