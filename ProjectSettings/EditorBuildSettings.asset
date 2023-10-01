@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 914230cb695dc7849a60e596faf9ce7c
+  - enabled: 1
     path: Assets/Scenes/Ken.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Palat.unity
     guid: 46e6d2f90d29a354a801b2b20dd92198
+  - enabled: 1
+    path: Assets/Scenes/LastRoom.unity
+    guid: c3b29bb8471c0f64b8009ad265030910
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: eb555f7da48ea2d418c60c8422460330
   m_configObjects: {}

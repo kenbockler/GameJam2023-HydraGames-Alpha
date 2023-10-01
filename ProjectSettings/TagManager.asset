@@ -7,6 +7,9 @@ TagManager:
   - Drag
   - drag
   - Background
+  - sein
+  - sein2
+  - TriggerObject
   layers:
   - Default
   - TransparentFX
