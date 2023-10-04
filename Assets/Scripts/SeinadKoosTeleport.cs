@@ -3,14 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class SeinadKoosTeleport : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public float xThreshold = -26.9168f;  // Määrake x-koordinaadi lävendväärtus
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        // Kontrollime, kas üks objektidest on "sein" ja teine "sein2"
-        if (gameObject.tag == "sein" && other.gameObject.tag == "sein2" || 
-            gameObject.tag == "sein2" && other.gameObject.tag == "sein")
+        // Logime objekti, mis puudutati
+        Debug.Log("Puudutatud objekt: " + collision.gameObject.tag);
+
+        // Kontrollime, kas objekti x-koordinaat on suurem või võrdne kui lävend
+        if (this.transform.position.x >= xThreshold)
         {
-            // Laeme uue stseeni (asendage "NewSceneName" teie soovitud stseeni nimega)
+            // Logime sündmuse
+            Debug.Log("X-koordinaat on suurem või võrdne kui lävend, laadin steeni 'end'");
+
+            // Laen stseeni nimega "end"
             SceneManager.LoadScene("end");
+        }
+        else
+        {
+            // Kui objekti x-koordinaat ei ole suurem või võrdne kui lävend,
+            // siis võite siin teha midagi muud.
         }
     }
 }
